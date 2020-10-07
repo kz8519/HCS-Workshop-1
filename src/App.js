@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import AboutScreen from "./views/About/About";
+import EducationScreen from "./views/Education/Education";
 import ExperienceScreen from "./views/Experience/Experience";
 import ProjectsScreen from "./views/Projects/Projects";
 
@@ -21,7 +22,8 @@ function App() {
     >
       <Router>
         <Navbar />
-        <Switch>
+        <Switch> 
+          <Route path="/education" component={EducationScreen} />
           <Route path="/experience" component={ExperienceScreen} />
           <Route path="/projects" component={ProjectsScreen} />
           <Route path={["/about", "/"]} component={AboutScreen} />
